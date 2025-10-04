@@ -44,7 +44,7 @@ export default function About() {
             {/* Botón de descarga CV */}
             <a
             id="resume"
-              href="/src/assets/cv.pdf"
+              href="https://drive.google.com/file/d/1c6sksM-8O22vLm_mLxBD0cobxSVRVjbF/view?usp=sharing"
               download
               className="btn btn-warning mt-3 fw-bold px-4"
             >
