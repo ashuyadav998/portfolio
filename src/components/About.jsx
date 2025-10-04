@@ -14,7 +14,7 @@ export default function About() {
           {/* 📷 Foto izquierda */}
           <div className="col-md-3 text-center mb-4 mb-md-0">
             <img
-              src="https://drive.google.com/file/d/1NJkF_JJTrOEofiYVI9J-bvn6NEYvVPVb/view?usp=sharing"
+              src="/src/assets/foto_1.png"
               alt="Profile"
               className="img-fluid rounded shadow-lg"
             />
@@ -44,7 +44,7 @@ export default function About() {
             {/* Botón de descarga CV */}
             <a
             id="resume"
-              href="https://drive.google.com/file/d/1c6sksM-8O22vLm_mLxBD0cobxSVRVjbF/view?usp=sharing"
+              href="/src/assets/cv.pdf"
               download
               className="btn btn-warning mt-3 fw-bold px-4"
             >
