@@ -14,7 +14,7 @@ export default function About() {
           {/* 📷 Foto izquierda */}
           <div className="col-md-3 text-center mb-4 mb-md-0">
             <img
-              src="/src/assets/foto_1.png"
+              src="https://drive.google.com/file/d/1NJkF_JJTrOEofiYVI9J-bvn6NEYvVPVb/view?usp=sharing"
               alt="Profile"
               className="img-fluid rounded shadow-lg"
             />
