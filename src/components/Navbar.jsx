@@ -20,7 +20,7 @@ export default function Navigation() {
       <Container>
         <Navbar.Brand href="#hero" className="fw-bold text-warning fs-4 d-flex align-items-center">
   <img
-    src="https://drive.google.com/file/d/14zFm-LRaP5xZmMcljIFKF71QyIxuS4tS/view?usp=sharing"
+    src="/src/assets/logo-ashu_2.png"
     alt="Logo"
     className="d-inline-block align-top"
     style={{ height: "40px", width: "auto" }} // Ajusta tamaño aquí
