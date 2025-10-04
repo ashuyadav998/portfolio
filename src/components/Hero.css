@@ -1,0 +1,61 @@
+.hero-dark {
+  background-color: #0d0d0d;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animación de entrada */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in.delay-2 {
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto máquina de escribir para el subtítulo */
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #ffc107;
+  width: 0;
+  animation: typing 3s steps(20, end) forwards, blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 18ch; } /* número de caracteres de "Fullstack Developer" */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Botones sociales */
+.social-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f8f9fa;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.social-circle:hover {
+  background: #ffc107;
+  color: #000;
+  transform: scale(1.1);
+}
