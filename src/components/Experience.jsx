@@ -3,78 +3,62 @@ import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 
 const experiences = [
   {
-    title: "Tècnic Informàtic",
+    title: "IT Technician",
     company: "Noneotech",
     location: "Lleida",
-    period: "Noviembre 2025 - Actualidad",
-    description: "Instalación y configuración de sistemas operativos. Reparación de ordenadores y equipos informáticos. Soporte técnico a clientes.",
+    period: "November 2025 - Present",
+    description: "Installation and configuration of operating systems. Computer and IT equipment repair. Technical support to clients.",
     type: "work"
   },
   {
-    title: "Responsable de tienda y encargado",
-    company: "SUMA Supermercat",
+    title: "Store Manager & Supervisor",
+    company: "SUMA Supermarket",
     location: "Lleida",
-    period: "Agosto 2023 - Actualidad",
-    description: "Gestión completa de la tienda. Supervisión de personal. Atención al cliente. Control de inventario y caja.",
+    period: "August 2023 - Present",
+    description: "Complete store management. Staff supervision. Customer service. Inventory and cash control.",
     type: "work"
   },
   {
-    title: "Programador Junior",
+    title: "Junior Programmer",
     company: "Inetum",
     location: "Tarragona",
-    period: "Abril 2023 - Agosto 2023",
-    description: "Desarrollo de aplicaciones web con React, Angular y PHP. Trabajo con bases de datos Oracle y MySQL. Colaboración en proyectos de equipo.",
+    period: "April 2023 - August 2023",
+    description: "Web application development with React, Angular, and PHP. Work with Oracle and MySQL databases. Team project collaboration.",
     type: "work"
   },
   {
-    title: "Programador Junior (Prácticas Dual)",
+    title: "Junior Programmer (Dual Internship)",
     company: "Inetum",
     location: "Tarragona",
-    period: "Julio 2022 - Abril 2023",
-    description: "Prácticas duales como programador junior. Desarrollo de módulos web. Aprendizaje de metodologías ágiles.",
-    type: "work"
-  },
-  {
-    title: "Cajero y Responsable",
-    company: "SUMA Supermercat",
-    location: "Reus",
-    period: "Junio 2021 - Agosto 2021",
-    description: "Atención al cliente en caja. Gestión de responsabilidades de turno. Control de stock.",
+    period: "July 2022 - April 2023",
+    description: "Dual internship as junior programmer. Web module development. Learning agile methodologies.",
     type: "work"
   }
 ];
 
 const education = [
   {
-    title: "Desarrollo de Aplicaciones Web (DAW)",
+    title: "Web Application Development (DAW)",
     institution: "Institut Baix Camp",
     location: "Reus",
     period: "2021 - 2023",
-    description: "Ciclo Formativo de Grado Superior. Especialización en desarrollo web front-end y back-end.",
+    description: "Higher Level Training Cycle. Specialization in front-end and back-end web development.",
     type: "education"
   },
   {
-    title: "Sistemas Microinformáticos y Redes (SMX)",
+    title: "Microcomputer Systems and Networks (SMX)",
     institution: "Institut Baix Camp",
     location: "Reus",
     period: "2020 - 2021",
-    description: "Ciclo Formativo de Grado Medio. Titulación en sistemas informáticos y redes.",
+    description: "Medium Level Training Cycle. Degree in computer systems and networks.",
     type: "education"
   },
   {
-    title: "Sistemas Microinformáticos y Redes",
+    title: "Microcomputer Systems and Networks",
     institution: "Institut Antoni Ballester",
     location: "Mont-roig",
     period: "2018 - 2019",
-    description: "Primer año del ciclo formativo.",
-    type: "education"
-  },
-  {
-    title: "Educación Secundaria Obligatoria (ESO)",
-    institution: "Institut Baix Camp",
-    location: "Reus",
-    period: "2019 - 2020",
-    description: "Graduado en Educación Secundaria Obligatoria.",
+    description: "First year of training cycle.",
     type: "education"
   }
 ];
@@ -83,46 +67,48 @@ export default function Experience() {
   return (
     <section id="experience" className="py-5 bg-dark text-white">
       <div className="container">
-        {/* Título */}
         <div className="text-center mb-5" data-aos="fade-up">
-          <h2 className="fw-bold mt-3">
-            Mi <span className="text-warning">Trayectoria</span>
+          <h2 className="fw-bold mt-3" style={{ fontFamily: 'Playfair Display', fontSize: '3rem' }}>
+            My <span className="gradient-text">Journey</span>
           </h2>
-          <p className="text-secondary">
-            Experiencia profesional y formación académica
+          <p className="text-secondary" style={{ fontSize: '1.15rem', fontFamily: 'Outfit' }}>
+            Professional experience and academic background
           </p>
+          <div className="d-flex justify-content-center mt-3">
+            <div style={{ width: '70px', height: '5px', background: 'linear-gradient(90deg, #ffc107, #ff9800)', borderRadius: '3px' }}></div>
+          </div>
         </div>
 
         <div className="row">
-          {/* Columna Experiencia Laboral */}
           <div className="col-lg-6 mb-4">
             <div className="d-flex align-items-center mb-4" data-aos="fade-right">
-              <FaBriefcase className="text-warning me-3" size={30} />
-              <h3 className="fw-bold mb-0">Experiencia Laboral</h3>
+              <FaBriefcase className="text-warning me-3" size={35} />
+              <h3 className="fw-bold mb-0" style={{ fontFamily: 'Playfair Display', fontSize: '2rem' }}>Work Experience</h3>
             </div>
 
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="card bg-dark border border-secondary mb-3 shadow"
+                className="card bg-dark border mb-3 shadow modern-card"
+                style={{ borderColor: '#2a2a2a !important' }}
                 data-aos="fade-right"
                 data-aos-delay={index * 100}
               >
-                <div className="card-body">
-                  <div className="d-flex justify-content-between align-items-start mb-2">
-                    <h5 className="card-title text-warning fw-bold mb-1">
+                <div className="card-body p-4">
+                  <div className="d-flex justify-content-between align-items-start mb-2 flex-wrap">
+                    <h5 className="card-title text-warning fw-bold mb-1" style={{ fontFamily: 'Playfair Display', fontSize: '1.3rem' }}>
                       {exp.title}
                     </h5>
-                    <span className="badge bg-secondary text-white small">
+                    <span className="badge bg-secondary text-white" style={{ fontFamily: 'Outfit', fontSize: '0.75rem', padding: '0.4rem 0.8rem' }}>
                       {exp.period}
                     </span>
                   </div>
                   
-                  <h6 className="text-white mb-2">
+                  <h6 className="text-white mb-3" style={{ fontFamily: 'Outfit', fontWeight: '600', fontSize: '1rem' }}>
                     {exp.company} · {exp.location}
                   </h6>
                   
-                  <p className="card-text text-secondary small mb-0">
+                  <p className="card-text text-secondary mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.7', fontFamily: 'Outfit' }}>
                     {exp.description}
                   </p>
                 </div>
@@ -130,35 +116,35 @@ export default function Experience() {
             ))}
           </div>
 
-          {/* Columna Formación */}
           <div className="col-lg-6 mb-4">
             <div className="d-flex align-items-center mb-4" data-aos="fade-left">
-              <FaGraduationCap className="text-warning me-3" size={30} />
-              <h3 className="fw-bold mb-0">Formación</h3>
+              <FaGraduationCap className="text-warning me-3" size={35} />
+              <h3 className="fw-bold mb-0" style={{ fontFamily: 'Playfair Display', fontSize: '2rem' }}>Education</h3>
             </div>
 
             {education.map((edu, index) => (
               <div
                 key={index}
-                className="card bg-dark border border-secondary mb-3 shadow"
+                className="card bg-dark border mb-3 shadow modern-card"
+                style={{ borderColor: '#2a2a2a !important' }}
                 data-aos="fade-left"
                 data-aos-delay={index * 100}
               >
-                <div className="card-body">
-                  <div className="d-flex justify-content-between align-items-start mb-2">
-                    <h5 className="card-title text-warning fw-bold mb-1">
+                <div className="card-body p-4">
+                  <div className="d-flex justify-content-between align-items-start mb-2 flex-wrap">
+                    <h5 className="card-title text-warning fw-bold mb-1" style={{ fontFamily: 'Playfair Display', fontSize: '1.3rem' }}>
                       {edu.title}
                     </h5>
-                    <span className="badge bg-secondary text-white small">
+                    <span className="badge bg-secondary text-white" style={{ fontFamily: 'Outfit', fontSize: '0.75rem', padding: '0.4rem 0.8rem' }}>
                       {edu.period}
                     </span>
                   </div>
                   
-                  <h6 className="text-white mb-2">
+                  <h6 className="text-white mb-3" style={{ fontFamily: 'Outfit', fontWeight: '600', fontSize: '1rem' }}>
                     {edu.institution} · {edu.location}
                   </h6>
                   
-                  <p className="card-text text-secondary small mb-0">
+                  <p className="card-text text-secondary mb-0" style={{ fontSize: '0.95rem', lineHeight: '1.7', fontFamily: 'Outfit' }}>
                     {edu.description}
                   </p>
                 </div>
@@ -167,20 +153,26 @@ export default function Experience() {
           </div>
         </div>
 
-        {/* Skills */}
         <div className="mt-5" data-aos="fade-up">
-          <h3 className="fw-bold text-center mb-4">
-            <span className="text-warning">Tecnologías</span> y Herramientas
+          <h3 className="fw-bold text-center mb-4" style={{ fontFamily: 'Playfair Display', fontSize: '2rem' }}>
+            <span className="gradient-text">Technologies</span> & Tools
           </h3>
           
           <div className="d-flex flex-wrap justify-content-center gap-3">
             {["HTML", "CSS", "JavaScript", "React", "Angular", "Node.js", "PHP", "Java", "MySQL", "Oracle", "MongoDB", "Tailwind CSS", "Bootstrap", "Git", "Express"].map((skill, i) => (
               <span
                 key={i}
-                className="badge bg-secondary text-white p-3"
-                style={{ fontSize: "1rem" }}
+                className="badge bg-secondary text-white skill-badge"
+                style={{ 
+                  fontSize: '1rem', 
+                  padding: '0.7rem 1.3rem',
+                  fontFamily: 'Outfit',
+                  fontWeight: '600',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer'
+                }}
                 data-aos="zoom-in"
-                data-aos-delay={i * 50}
+                data-aos-delay={i * 30}
               >
                 {skill}
               </span>

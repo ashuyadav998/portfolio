@@ -1,44 +1,490 @@
-/* IMPORTANTE: Debes tener Bootstrap cargado antes de este CSS */
+/* ===== MODERN TYPOGRAPHY & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Modern Color Palette */
+  --primary-gold: #ffc107;
+  --primary-dark: #0a0a0a;
+  --secondary-dark: #1a1a1a;
+  --text-light: #ffffff;
+  --text-gray: #a0a0a0;
+  --border-gray: #2a2a2a;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  --gradient-dark: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+}
 
 body {
-  /* Fondo general de la página, muy oscuro */
-  background-color: #0a0a0a;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Redefinimos bg-dark para que sea el color más oscuro de la página */
-.bg-dark {
-  background-color: #111111 !important; /* Un gris muy oscuro, casi negro */
+/* Headings use Poppins for impact */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
-/* Ajustes para el tema */
-.text-secondary {
-  color: #aaaaaa !important;
+h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 900;
 }
 
+h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--primary-gold);
+  color: var(--primary-dark);
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gold);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9800;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ===== GLOWING TEXT EFFECT ===== */
+.glow-text {
+  text-shadow: 
+    0 0 10px rgba(255, 193, 7, 0.5),
+    0 0 20px rgba(255, 193, 7, 0.3),
+    0 0 30px rgba(255, 193, 7, 0.2);
+}
+
+/* ===== GRADIENT TEXT ===== */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== MODERN BUTTONS ===== */
 .btn-warning {
-  background-color: #f8b400 !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: var(--gradient-primary);
   border: none;
-  color: #000 !important;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-warning:hover {
-  background-color: #ffcb32 !important;
   transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.3);
 }
 
+.btn-warning::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-warning:hover::before {
+  left: 100%;
+}
+
+.btn-outline-warning {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  border: 2px solid var(--primary-gold);
+  color: var(--primary-gold);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-warning:hover {
+  background: var(--gradient-primary);
+  border-color: var(--primary-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.2);
+}
+
+/* ===== CARDS WITH MODERN EFFECTS ===== */
+.card {
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid var(--border-gray);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255, 193, 7, 0.15);
+  border-color: var(--primary-gold);
+}
+
+/* ===== PROJECT CARDS ===== */
 .project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #212121 !important; /* Para que las tarjetas sean ligeramente más claras que el fondo */
+  position: relative;
+  overflow: hidden;
 }
 
-.project-card:hover {
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 193, 7, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.social-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--secondary-dark);
+  border: 2px solid var(--border-gray);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-circle:hover {
+  background: var(--gradient-primary);
+  border-color: var(--primary-gold);
+  color: var(--primary-dark);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.3);
+}
+
+/* ===== BADGES ===== */
+.badge {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2);
+}
+
+/* ===== SECTION BACKGROUNDS ===== */
+.bg-dark {
+  background: var(--gradient-dark) !important;
+}
+
+/* ===== NAVBAR EFFECTS ===== */
+.navbar {
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.navbar.bg-dark {
+  background: rgba(10, 10, 10, 0.95) !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== HERO SECTION ===== */
+.hero-dark {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+  position: relative;
+}
+
+.hero-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 50%, rgba(255, 152, 0, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ===== FADE IN ANIMATIONS ===== */
+.fade-in {
+  animation: fadeInUp 1s ease-out;
+}
+
+.fade-in.delay-1 {
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
+}
+
+.fade-in.delay-2 {
+  animation-delay: 0.4s;
+  animation-fill-mode: backwards;
+}
+
+/* ===== TYPING ANIMATION ===== */
+.typing {
+  overflow: hidden;
+  border-right: 3px solid var(--primary-gold);
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  display: inline-block;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary-gold);
+  }
+}
+
+/* ===== RESPONSIVE IMPROVEMENTS ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .social-circle {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+/* ===== IMAGE HOVER EFFECTS ===== */
+img {
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* ===== SKILL TAGS ===== */
+.skill-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  background: var(--secondary-dark);
+  border: 1px solid var(--border-gray);
+  border-radius: 25px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: var(--gradient-primary);
+  color: var(--primary-dark);
+  border-color: var(--primary-gold);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+/* ===== LOADING STATES ===== */
+.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid var(--primary-gold);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== MODERN CARD HOVER EFFECTS ===== */
+.modern-card {
+  transition: all 0.3s ease;
+}
+
+.modern-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(248, 180, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(255, 193, 7, 0.2);
+  border-color: #ffc107 !important;
 }
 
-section {
-  padding: 80px 0;
+/* ===== PROJECT CARD EFFECTS ===== */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255, 193, 7, 0.25);
+}
+
+/* ===== NAVBAR LINK EFFECTS ===== */
+.nav-link-custom {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, #ffc107, #ff9800);
+  transition: transform 0.3s ease;
+}
+
+.nav-link-custom:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.nav-link-custom:hover {
+  color: #ffc107 !important;
+}
+
+/* ===== SKILL BADGE HOVER ===== */
+.skill-badge:hover {
+  background: linear-gradient(135deg, #ffc107, #ff9800) !important;
+  color: #0a0a0a !important;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+}
+
+/* ===== FOOTER SOCIAL CIRCLES ===== */
+.social-circle-footer {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  border: 2px solid #2a2a2a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-circle-footer:hover {
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  border-color: #ffc107;
+  color: #0a0a0a;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.3);
+}
+
+/* ===== RESPONSIVE TYPOGRAPHY ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+  
+  h3 {
+    font-size: 1.5rem !important;
+  }
 }
