@@ -14,10 +14,13 @@ export default function About() {
           {/* 📷 Foto izquierda */}
           <div className="col-md-3 text-center mb-4 mb-md-0">
             <img
-              src="/src/assets/foto_1.png"
-              alt="Profile"
-              className="img-fluid rounded shadow-lg"
-            />
+  src="/foto_1.png"
+  alt="Ashutosh Yadav - Fullstack Developer"
+  className="img-fluid rounded shadow-lg"
+  loading="lazy"  // ← Añade lazy loading
+  width="300"     // ← Define dimensiones
+  height="300"
+/>
           </div>
 
           {/* 📄 Info derecha */}
@@ -33,10 +36,10 @@ export default function About() {
             
               <div className="col-md-6">
                 <ul className="list-unstyled text-secondary">
-                  <li><strong className="text-white">Email:</strong> ttechashu@gmail.com</li>
-                  <li><strong className="text-white">From:</strong> Spain</li>
-                  <li><strong className="text-white">Languages:</strong> Spainish, Catalan, Hindi, Bhojpuri</li>
-                  <li><strong className="text-white">Freelance:</strong> Available</li>
+                <li><strong>Email:</strong> ashutoshy595@gmail.com</li>
+<li><strong>Teléfono:</strong> 632 253 220</li>
+<li><strong>Ubicación:</strong> Reus, Tarragona</li>
+<li><strong>Idiomas:</strong> Español, Catalán, Inglés, Hindi, Bhojpuri</li>
                 </ul>
               </div>
             </div>
@@ -44,7 +47,7 @@ export default function About() {
             {/* Botón de descarga CV */}
             <a
             id="resume"
-              href="/src/assets/cv.pdf"
+              href="/cv.pdf"
               download
               className="btn btn-warning mt-3 fw-bold px-4"
             >

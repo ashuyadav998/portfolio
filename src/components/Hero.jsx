@@ -21,9 +21,9 @@ export default function Hero() {
 
         {/* Links sociales */}
         <div className="d-flex justify-content-center gap-3 mt-4 fade-in delay-2">
-          <a href="https://www.linkedin.com/in/ashutosh-yadav-02134231b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" className="social-circle"><FaLinkedin /></a>
+          <a href="https://www.linkedin.com/in/ashutosh-yadav-02134231b" className="social-circle"><FaLinkedin /></a>
           <a href="https://github.com/ashuyadav0" className="social-circle"><FaGithub /></a>
-          <a href="https://www.instagram.com/iashuyadav_0?igsh=MXhrOGQ0dzE1dzNrbQ%3D%3D&utm_source=qr" className="social-circle"><FaInstagram /></a>
+          <a href="https://www.instagram.com/iashuyadav_0" className="social-circle"><FaInstagram /></a>
         </div>
       </div>
     </section>
