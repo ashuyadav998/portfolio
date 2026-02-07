@@ -13,20 +13,20 @@ const projects = [
     icon: <FaReact size={45} className="text-warning" />
   },
   {
-    title: "Your Project 2",
+    title: "Tech Tutorial App",
     description: "Add your second project here. Edit the title, description, technologies, and links to showcase your amazing work and skills.",
-    tech: ["Angular", "PHP", "MySQL"],
-    github: "https://github.com/ashuyadav0/your-project-2",
+    tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "CORS"],
+    github: "https://techtutoral-app.netlify.app/",
     demo: null,
     featured: false,
     icon: <FaNode size={45} className="text-warning" />
   },
   {
-    title: "Your Project 3",
+    title: "Spanish to Hindi Course",
     description: "Add your third project here. It can be any work you've completed that demonstrates your technical abilities and problem-solving skills.",
-    tech: ["JavaScript", "HTML", "CSS"],
-    github: "https://github.com/ashuyadav0/your-project-3",
-    demo: null,
+    tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "CORS"],
+    github: "https://github.com/ashuyadav998/spanish-course-app",
+    demo: 'spanishtohindi-course.netlify.app',
     featured: false,
     icon: <SiMongodb size={45} className="text-warning" />
   },

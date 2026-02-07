@@ -67,7 +67,7 @@ export default function About() {
                   <div>
                     <small className="text-warning d-block" style={{ fontSize: '0.7rem', textTransform: 'uppercase', fontFamily: 'Outfit', fontWeight: '700' }}>Email</small>
                     <a href="mailto:ashutoshy595@gmail.com" className="text-white text-decoration-none" style={{ fontSize: '0.9rem', fontFamily: 'Outfit' }}>
-                      ashutoshy595@gmail.com
+                      ttechashu@gmail.com
                     </a>
                   </div>
                 </div>
@@ -90,7 +90,7 @@ export default function About() {
                   <span className="me-3" style={{ fontSize: '1.6rem' }}>📍</span>
                   <div>
                     <small className="text-warning d-block" style={{ fontSize: '0.7rem', textTransform: 'uppercase', fontFamily: 'Outfit', fontWeight: '700' }}>Location</small>
-                    <span className="text-white" style={{ fontSize: '0.9rem', fontFamily: 'Outfit' }}>Reus, Tarragona, Spain</span>
+                    <span className="text-white" style={{ fontSize: '0.9rem', fontFamily: 'Outfit' }}>Lleida, Lleida, Spain</span>
                   </div>
                 </div>
               </div>

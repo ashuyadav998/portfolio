@@ -60,7 +60,7 @@ export default function Footer() {
           <p className="mb-2">
             <strong>Email:</strong>{' '}
             <a href="mailto:ashutoshy595@gmail.com" className="text-warning text-decoration-none">
-              ashutoshy595@gmail.com
+              ttechashu@gmail.com
             </a>
           </p>
           <p className="mb-2">
@@ -70,7 +70,7 @@ export default function Footer() {
             </a>
           </p>
           <p className="mb-0">
-            <strong>Location:</strong> Reus, Tarragona, Spain
+            <strong>Location:</strong> Lleida, Lleida, Spain
           </p>
         </div>
 
