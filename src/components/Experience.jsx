@@ -4,7 +4,7 @@ import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 const experiences = [
   {
     title: "IT Technician",
-    company: "Noneotech",
+    company: "Noneotech and Seidor",
     location: "Lleida",
     period: "November 2025 - Present",
     description: "Installation and configuration of operating systems. Computer and IT equipment repair. Technical support to clients.",
