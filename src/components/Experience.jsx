@@ -60,7 +60,24 @@ const education = [
     period: "2018 - 2019",
     description: "First year of training cycle.",
     type: "education"
-  }
+  },
+  {
+  title: "High School",
+    institution: "Institut Baix Camp",
+    location: "Reus",
+    period: "2017 - 2019",
+    description: "Compulsory Secondary Education.",
+    type: "education"
+  },
+  {
+  title: "Primary School",
+    institution: "Gyan Kunj Senior Sec. Academy Bansi Bazar Ballia",
+    location: "Bansi Bazar - Ballia",
+    period: "2017 - 2019",
+    description: "Compulsory Primary Education.",
+    type: "education"
+  },
+
 ];
 
 export default function Experience() {
