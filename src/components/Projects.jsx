@@ -16,8 +16,8 @@ const projects = [
     title: "Tech Tutorial App",
     description: "Add your second project here. Edit the title, description, technologies, and links to showcase your amazing work and skills.",
     tech: ["React", "Node.js", "MongoDB", "Express", "Tailwind CSS", "CORS"],
-    github: "https://techtutoral-app.netlify.app/",
-    demo: null,
+    github: "https://github.com/ashuyadav998/tutorial-app",
+    demo: 'https://techtutoral-app.netlify.app/',
     featured: false,
     icon: <FaNode size={45} className="text-warning" />
   },
