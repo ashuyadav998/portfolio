@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import AOS from 'aos'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Experience from './components/Experience.jsx'
@@ -25,6 +26,7 @@ function App() {
       <Experience />
       <Projects />
       <Footer />
+      <SpeedInsights />
     </div>
   )
 }
